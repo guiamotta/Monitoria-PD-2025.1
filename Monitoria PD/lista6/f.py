@@ -1,13 +1,10 @@
+fileira, col = map(int, input().split())
 matriz = []
-for l in range(10):
-  matriz.append(input().split())
-for l in range(10):
-  for c in range(10):
-    if matriz[l][c] == "t":
-      if (l>0 and matriz[l-1][c]=="*") or \
-        (l<9 and matriz[l+1][c]=="*") or \
-        (c>0 and matriz[l][c-1]=="*") or \
-        (c<9 and matriz[l][c+1]=="*"):
-        matriz[l][c] = "p"
-for l in range(10):
-  print(*matriz[l])
+for l in range(fileira):
+  matriz.append(list(map(int, input().split())))
+for l in range(fileira):
+  for c in range(col):
+    if c<col-1:
+      if matriz[l][c]==0 and matriz[l][c+1]==0:
+        print(f"Fileira: {l+1}")
+        print(f"Assentos: {c+1} e {c+2}")

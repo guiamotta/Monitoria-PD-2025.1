@@ -1,21 +1,13 @@
-fileira, col = map(int, input().split())
 matriz = []
-soma = 0
-especial = True
-for l in range(fileira):
-  linha = list(map(int, input().split()))
-  matriz.append(linha)
-  soma_aux = sum(linha)
-  if l == 0: 
-    soma = soma_aux
-  elif soma_aux != soma:
-    especial = False
-  soma_aux = 0
-  for c in range(col):
-    soma_aux += matriz[l][c]
-  if soma_aux != soma:
-    especial = False
-if especial:
-  print("Sim")
-else:
-  print("Nao")
+for l in range(10):
+  matriz.append(input().split())
+for l in range(10):
+  for c in range(10):
+    if matriz[l][c] == "t":
+      if (l>0 and matriz[l-1][c]=="*") or \
+        (l<9 and matriz[l+1][c]=="*") or \
+        (c>0 and matriz[l][c-1]=="*") or \
+        (c<9 and matriz[l][c+1]=="*"):
+        matriz[l][c] = "p"
+for l in range(10):
+  print(*matriz[l])
