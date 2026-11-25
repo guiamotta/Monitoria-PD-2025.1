@@ -1,4 +1,4 @@
-# Exercícios de Introdução à Programação em Python - Monitoria de Processamento de Dados
+# Exercícios de Introdução à Programação em Python - Monitoria de Processamento de Dados UFBA
 
 Este repositório contém uma série de listas de exercícios em Python. Turma de Processamento de Dados (MAT045) do prof. Danilo Coimbra.
 
